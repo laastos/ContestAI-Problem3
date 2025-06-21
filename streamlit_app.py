@@ -54,7 +54,7 @@ class ConditionalVAE(nn.Module):
         )
 
         self.decoder_conv = nn.Sequential(
-            nn.ConvTranspose2d(128, 64, 4, 2, 1),  # 3x3 -> 7x7
+            nn.ConvTranspose2d(128, 64, 3, 2, 0),  # 3x3 -> 7x7
             nn.ReLU(),
             nn.ConvTranspose2d(64, 32, 4, 2, 1),   # 7x7 -> 14x14
             nn.ReLU(),
